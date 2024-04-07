@@ -15,4 +15,16 @@ public class Cameraman : MonoBehaviour
         CameraSpeed += 5;
         
     }
+    public void Stopped()
+    {
+        CameraSpeed = 0;
+    }
+    public void SetSpeed(float newSpeed)
+    {
+        CameraSpeed = newSpeed;
+    }
+    public float GetSpeed()
+    {
+        return CameraSpeed;
+    }
 }

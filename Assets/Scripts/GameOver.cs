@@ -6,15 +6,19 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject GameOverPanel;
-
+    private Life lifeScript;
     // Update is called once per frame
+    void Start()
+    {
+        lifeScript = GameObject.FindGameObjectWithTag("LifeManager").GetComponent<Life>();
+    }
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("Player1") == null)
+        if (GameObject.FindGameObjectWithTag("Player1") == null && lifeScript.GetLife() <= 0)
         {
             GameOverPanel.SetActive(true);
         }
-        else if (GameObject.FindGameObjectWithTag("Player2") == null)
+        else if (GameObject.FindGameObjectWithTag("Player2") == null && lifeScript.GetLife() <= 0)
         {
             GameOverPanel.SetActive(true);
         }

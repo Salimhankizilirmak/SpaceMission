@@ -27,6 +27,7 @@ public class Center : MonoBehaviour
         {
             
             LevelScript.Add1Level();
+            Destroy(this.gameObject);
             CameraSpeed.Add5Points();// Çarpýþma Player1 ile olduysa 5 puan ekle
         }
         

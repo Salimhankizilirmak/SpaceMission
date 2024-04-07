@@ -13,6 +13,7 @@ TagManager:
   - player2Oxy
   - LevelManagement
   - GameManager
+  - LifeManager
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 
     public enum GemiTipi { Player1, Player2 }
     public GemiTipi gemiTipi;
-
+    private Vector3 respawnPoint;
     public float hiz; // Geminin hýzý
 
     private Rigidbody2D rb;
@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-       
+        respawnPoint = transform.position;
     }
 
     private void Update()
@@ -53,6 +53,15 @@ public class PlayerMovement : MonoBehaviour
                 hareketYonu = -1.0f;
             }
 
+        }
+        public void Die()
+        {
+            // Oyuncunun öldüðü yerde respawn et
+            Respawn();
+        }
+        void Respawn()
+        {
+            transform.position = respawnPoint; // Oyuncuyu respawnPoint'te yeniden konumlandýr
         }
 
         // Yukarý/aþaðý hareketi uygula
