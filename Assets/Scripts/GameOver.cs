@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject GameOverPanel;
+    public GameObject SettingPanel;
     private Life lifeScript;
     // Update is called once per frame
     void Start()
@@ -35,5 +36,13 @@ public class GameOver : MonoBehaviour
     public void Back()
     {
         SceneManager.LoadScene("HomeScene");
+    }
+    public void Setting()
+    {
+        SettingPanel.SetActive(true);
+    }
+    public void SettingQuit()
+    {
+        SettingPanel.SetActive(false);
     }
 }

@@ -14,6 +14,8 @@ TagManager:
   - LevelManagement
   - GameManager
   - LifeManager
+  - blackHoleRenderer
+  - redButtonRenderer
   layers:
   - Default
   - TransparentFX

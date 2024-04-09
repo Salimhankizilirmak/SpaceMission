@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     public enum GemiTipi { Player1, Player2 }
     public GemiTipi gemiTipi;
     private Vector3 respawnPoint;
-    public float hiz; // Geminin hýzý
+    public float hiz; // Geminin hï¿½zï¿½
 
     private Rigidbody2D rb;
     
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         float hareketYonu = 0.0f;
         
 
-        // Birinci gemi için W-S kontrolleri
+        // Birinci gemi iï¿½in W-S kontrolleri
         if (gemiTipi == GemiTipi.Player1)
         {
 
@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
                 hareketYonu = -1.0f;
             }
         }
-        // Ýkinci gemi için Up-Down kontrolleri
+        // ï¿½kinci gemi iï¿½in Up-Down kontrolleri
         else if (gemiTipi == GemiTipi.Player2)
         {
 
@@ -54,17 +54,10 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-        public void Die()
-        {
-            // Oyuncunun öldüðü yerde respawn et
-            Respawn();
-        }
-        void Respawn()
-        {
-            transform.position = respawnPoint; // Oyuncuyu respawnPoint'te yeniden konumlandýr
-        }
 
-        // Yukarý/aþaðý hareketi uygula
+       
+
+        // Yukarï¿½/aï¿½aï¿½ï¿½ hareketi uygula
         rb.velocity = new Vector2(0.0f, hareketYonu * hiz);
 
 
