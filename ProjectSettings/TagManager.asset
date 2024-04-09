@@ -16,6 +16,12 @@ TagManager:
   - LifeManager
   - blackHoleRenderer
   - redButtonRenderer
+  - firstPage
+  - secondPage
+  - thirdPage
+  - zeroPage
+  - Mars
+  - win
   layers:
   - Default
   - TransparentFX

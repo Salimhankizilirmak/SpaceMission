@@ -8,6 +8,7 @@ public class GameOver : MonoBehaviour
     public GameObject GameOverPanel;
     public GameObject SettingPanel;
     private Life lifeScript;
+
     // Update is called once per frame
     void Start()
     {
@@ -45,4 +46,5 @@ public class GameOver : MonoBehaviour
     {
         SettingPanel.SetActive(false);
     }
+
 }

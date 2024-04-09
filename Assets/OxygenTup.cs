@@ -7,7 +7,7 @@ public class OxygenTup : MonoBehaviour
     private GameObject Player1;
     private GameObject Player2;
     private Oxygen oxyScript;
-   // Score sýnýfýnýn referansýný tutacak deðiþken
+   
     public AudioSource collisionSound;
     void Start()
     {

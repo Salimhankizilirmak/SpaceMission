@@ -7,7 +7,8 @@ public class Obstacle : MonoBehaviour
     private GameObject Player1;
     private GameObject Player2;
     private Life lifeScript;
-    public AudioSource collisionSound; // Önceden atanmýþ patlama sesi dosyasý
+    public float Duration = 3f;
+    public AudioSource collisionSound; 
 
     void Start()
     {
@@ -31,11 +32,16 @@ public class Obstacle : MonoBehaviour
             {
                 lifeScript.LifeReduce();
                 Destroy(this.gameObject);
+
             }
             else if (lifeScript.GetLife() == 0)
             {
+                
                 Destroy(Player1.gameObject);
-                Destroy(this.gameObject);
+                
+                StartCoroutine(Stopped());
+                Destroy(Player2.gameObject);
+
             }
             collisionSound.Play(); // Patlama sesini çal}
         }
@@ -48,9 +54,17 @@ public class Obstacle : MonoBehaviour
             else if (lifeScript.GetLife() == 0)
             {
                 Destroy(Player2.gameObject);
+                StartCoroutine(Stopped());
+                Destroy(Player1.gameObject);
             }
             collisionSound.Play(); // Patlama sesini çal
         }
+    }
+    IEnumerator Stopped()
+    {
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(Duration);
+        Time.timeScale = 1f;
     }
 
 
