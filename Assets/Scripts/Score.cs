@@ -13,6 +13,7 @@ public class Score : MonoBehaviour
     void Start()
     {
         highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+       
     }
 
     void Update()

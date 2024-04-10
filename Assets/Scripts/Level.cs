@@ -24,7 +24,7 @@ public class Level : MonoBehaviour
         Time.timeScale = 0f;
 
         // Mesajý göster
-        messageText.text = "Congratulations!!! You are in " + LevelText.text  +". level:))";
+        messageText.text = "Congratulations!!! You are in " + ((int)level) + ". level:))";
         messagePanel.SetActive(true);
 
         // Mesajýn ekranda kalacaðý süre kadar bekle

@@ -1,5 +1,5 @@
 using UnityEngine;
-public class PlayerMovement : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
 
     public enum GemiTipi { Player1, Player2 }
