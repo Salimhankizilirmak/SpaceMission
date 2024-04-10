@@ -1515,7 +1515,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 934225466}
         m_TargetAssemblyTypeName: Sound, Assembly-CSharp
-        m_MethodName: MuteGame
+        m_MethodName: Unmute
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1868,7 +1868,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 934225466}
         m_TargetAssemblyTypeName: Sound, Assembly-CSharp
-        m_MethodName: UnmuteGame
+        m_MethodName: Mute
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -2,29 +2,27 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    
-
-    // Tüm sesleri tekrar aç
-    public void UnmuteGame()
+    public void Mute()
     {
-        // Tüm AudioListener bileþenlerini al
-        AudioListener[] audioListeners = FindObjectsOfType<AudioListener>();
+        // Tüm AudioSource bileþenlerini al
+        AudioSource[] audioSources = FindObjectsOfType<AudioSource>();
 
-        // Her bir AudioListener bileþenini etkinleþtir
-        foreach (AudioListener listener in audioListeners)
+        // Her bir AudioSource bileþenini etkinleþtir
+        foreach (AudioSource source in audioSources)
         {
-            listener.enabled = true;
+            source.enabled = true;
         }
     }
-    public void MuteGame()
-    { 
-    // Tüm AudioListener bileþenlerini al
-    AudioListener[] audioListeners = FindObjectsOfType<AudioListener>();
 
-        // Her bir AudioListener bileþenini devre dýþý býrak
-        foreach (AudioListener listener in audioListeners)
+    public void Unmute()
+    {
+        // Tüm AudioSource bileþenlerini al
+        AudioSource[] audioSources = FindObjectsOfType<AudioSource>();
+
+        // Her bir AudioSource bileþenini devre dýþý býrak
+        foreach (AudioSource source in audioSources)
         {
-            listener.enabled = false;
+            source.enabled = false;
         }
-}
+    }
 }

@@ -22,7 +22,7 @@ public class Level : MonoBehaviour
     {
         // Oyun hýzýný geçici olarak sýfýrla
         Time.timeScale = 0f;
-
+        
         // Mesajý göster
         messageText.text = "Congratulations!!! You are in " + ((int)level) + ". level:))";
         messagePanel.SetActive(true);
